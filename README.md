@@ -32,5 +32,5 @@ Specify a password for admin. In development, use admin1234 for simplicity.
 
 ### Run the app
 ```bash
-docker-compose up
+docker compose up
 ```
