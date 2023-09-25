@@ -8,9 +8,9 @@ This repository provides a central location that contains sub-modules related to
 You need to build the docker image from the provided DockerFile using Docker Compose. To do this, ensure docker is running, and then:
 
 ```bash
-git clone --recursive https://github.com/MLHale/CYBR8470-building-a-webservice-lab.git
-cd CYBR8470-building-a-webservice-lab
-docker-compose build
+git clone https://github.com/MLHale/cybr8470-web-service-lab.git
+cd cybr8470-web-service-lab
+docker compose build
 ```
 
 This creates a few docker containers with all of the requisite installed dependencies to run the dev environment.
@@ -22,7 +22,7 @@ First, upon initial install, you need to do some basic setup.
 We need to initialize the Django database in postgres
 
 ```bash
-docker-compose run django bash
+docker compose exec django bash
 python manage.py makemigrations
 python manage.py migrate
 python manage.py createsuperuser --username admin --email admin
